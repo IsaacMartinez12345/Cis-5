@@ -8,8 +8,6 @@
  * File:   main.cpp
  * Author: Isaac
  *
- * Created on January 12, 2020, 3:10 PM
- */
 
 #include <iostream>
 using namespace std;
