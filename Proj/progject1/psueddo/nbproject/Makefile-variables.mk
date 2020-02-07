@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=martinez_isaac_-_project_1_40739
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/martinez_isaac_-_project_1_40739
+CND_ARTIFACT_NAME_Debug=psueddo
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/psueddo
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=martinez,isaac-project140739.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/martinez,isaac-project140739.tar
+CND_PACKAGE_NAME_Debug=psueddo.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/psueddo.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=martinez_isaac_-_project_1_40739
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/martinez_isaac_-_project_1_40739
+CND_ARTIFACT_NAME_Release=psueddo
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/psueddo
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=martinez,isaac-project140739.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/martinez,isaac-project140739.tar
+CND_PACKAGE_NAME_Release=psueddo.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/psueddo.tar
 #
 # include compiler specific variables
 #
