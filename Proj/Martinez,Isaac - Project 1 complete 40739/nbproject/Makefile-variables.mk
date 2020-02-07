@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=cppapplication_4
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/cppapplication_4
+CND_ARTIFACT_NAME_Debug=martinez_isaac_-_project_1_40739
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/martinez_isaac_-_project_1_40739
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=cppapplication4.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/cppapplication4.tar
+CND_PACKAGE_NAME_Debug=martinez,isaac-project140739.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/martinez,isaac-project140739.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=cppapplication_4
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/cppapplication_4
+CND_ARTIFACT_NAME_Release=martinez_isaac_-_project_1_40739
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/martinez_isaac_-_project_1_40739
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=cppapplication4.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/cppapplication4.tar
+CND_PACKAGE_NAME_Release=martinez,isaac-project140739.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/martinez,isaac-project140739.tar
 #
 # include compiler specific variables
 #
