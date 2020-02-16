@@ -33,6 +33,8 @@
 #include<ctime>     //Time for rand
 #include<iomanip> //Format the output
 #include<cmath>  //Math functions
+#include<fstream>
+#include<string>
 using namespace std;
 //User Libraries none 
 
@@ -270,42 +272,51 @@ public:
 };
 //Execution begins here
 
-
+void leaderBoard();
+void sSort(string[], int = 3);
+void sSort(int[], int = 3);
+int lnrSrch(string[], int);
+void exit();
 
 
 int main(){
 char gameChoice;
-cout << "What Would You Like To Play Today?\n A for Game A\n B for Game B\n\n E to EXIT\n" << endl;// choice of player
-cin >> gameChoice;
-gameChoice = (toupper(gameChoice));
-if(gameChoice == 'E'){
-  cout << "Thanks For Playing, Let's Play Again Soon!" << endl;
-        system("pause");
-        return 0;
-}//end of independent if statement 
-else if(gameChoice == 'L'){
-    leaderBoard();
+bool play = true;
+while(play == true){
+    cout << "What Would You Like To Play Today?\n A for Game A\n B for Game B\n L for Leaderboard\n\n E to EXIT\n" << endl;// choice of player
+    cin >> gameChoice;
+    gameChoice = (toupper(gameChoice));
+    if(gameChoice == 'E'){
+      cout << "Thanks For Playing, Let's Play Again Soon!" << endl;
+            exit();
+            return 0;
+    }//end of independent if statement
+    else if(gameChoice == 'L'){
+        leaderBoard();
+        main();
+    }
+    Player p1,p2;
+    string s1;
+    cout<<"\nEnter Player 1 Name : ";//display of player 1 name to enter 
+    cin>>s1;
+    p1.setName(s1);
+    cout<<"\nEnter Player 2 Name : ";//display of player 2 name to enter
+    cin>>s1;
+    p2.setName(s1);
+    if(gameChoice == 'A'){  //choice of  game between a  and b
+      GameModeA g(p1,p2);
+      g.play();
+    }else if(gameChoice == 'B'){
+      GameModeB g(p1,p2);
+      g.play();
+    }
+    else{
+      cout<<"\n Wrong Choice ";// incorrect key
+    }//end of else
 }
-Player p1,p2;
-string s1;
-cout<<"\nEnter Player 1 Name : ";//display of player 1 name to enter 
-cin>>s1;
-p1.setName(s1);
-cout<<"\nEnter Player 2 Name : ";//display of player 2 name to enter
-cin>>s1;
-p2.setName(s1);
-if(gameChoice == 'A'){  //choice of  game between a  and b
-  GameModeA g(p1,p2);
-  g.play();
-}else if(gameChoice == 'B'){
-  GameModeB g(p1,p2);
-  g.play();
-}else{
-  cout<<"\n Wrong Choice ";// incorrect key
-}//end of else
 }// end of game 
 void leaderBoard(){
-    const int SCORE_SIZE = 4;
+    const int SCORE_SIZE = 3;
     string names[SCORE_SIZE];   //Names array
     int scores[SCORE_SIZE];   //Scores array
     ifstream inputFile;
@@ -324,8 +335,8 @@ void leaderBoard(){
     
     cout << "\n" << "Leader Board\n" << endl;
     for (int i=0; i<SCORE_SIZE; i++){   //for loop output names
-        cout<< names[i];   //Score output
-        cout << scores[i] << endl;
+        cout << names[i];   //Score output
+        cout << "\t" << scores[i] << endl;
     }
     cout << endl;
     int index = lnrSrch(names, SCORE_SIZE); //Linear search
@@ -345,35 +356,50 @@ void leaderBoard(){
     outputFile.close();  //close file
 }
 void sSort(string a[], int n){
-    int Find, startIndex;
+    int startScan, minIndex;
     string minValue;
     
-    for (Find = 0; Find < (n - 1); Find++){
-        startIndex = Find;
-        minValue = a[Find];
-        for(int index = Find + 1; index < n; index++){
+    for (startScan = 0; startScan < (n - 1); startScan++){
+        minIndex = startScan;
+        minValue = a[startScan];
+        for(int index = startScan + 1; index < n; index++){
             if (a[index] < minValue){
                 minValue = a[index];
-                startIndex = index;
+                minIndex = index;
             }
         }
-        a[startIndex] = a[Find];
-        a[Find] = minValue;
+        a[minIndex] = a[startScan];
+        a[startScan] = minValue;
     }
 }
 void sSort(int a[], int n){
-    int Find, startIndex, minValue;
+    int startScan, minIndex, minValue;
     
-    for (Find = 0; Find < (n - 1); Find ++){
-        startIndex = Find;
-        minValue = a[Find ];
-        for(int index = Find + 1; index < n; index++){
+    for (startScan = 0; startScan < (n - 1); startScan++){
+        minIndex = startScan;
+        minValue = a[startScan];
+        for(int index = startScan + 1; index < n; index++){
             if (a[index] < minValue){
                 minValue = a[index];
-                startIndex = index;
+                minIndex = index;
             }
         }
-        a[startIndex] = a[Find];
-        a[Find] = minValue;
+        a[minIndex] = a[startScan];
+        a[startScan] = minValue;
     }
+}
+int lnrSrch(string a[], int n){
+    string val;
+    cout << "What is your name: ";
+    cin >> val;
+    for (int i = 0; i < n; i++){
+        if (val == a[i]){
+            return i;
+        }
+    }
+    return -1;
+}
+void exit(){
+    cout << "\nProgram has closed." << endl;
+    exit(0);
 }
